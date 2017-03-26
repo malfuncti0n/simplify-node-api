@@ -10,7 +10,7 @@ const routes = require('./utils/routes');
 class Server{
 
 	constructor(){
-		this.port =  80;
+		this.port =  process.env.PORT || 3000;
 		this.host = `localhost`;
 		this.app = express();
 	}
