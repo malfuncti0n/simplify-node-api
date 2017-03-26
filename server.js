@@ -10,7 +10,7 @@ const routes = require('./utils/routes');
 class Server{
 
 	constructor(){
-		this.port = 80;
+		this.port =  process.env.PORT || 8080;
 		this.host = `localhost`;
 		this.app = express();
 	}
@@ -33,8 +33,8 @@ class Server{
 		this.appConfig();
 		this.includeRoutes();
 
-		this.app.listen(this.port, () => {
-			console.log(`it work`);
+		var server = this.app.listen(this.port,() => {
+			console.log(`Listening on ${server.address().port}`);
 		});
 	}
 }
