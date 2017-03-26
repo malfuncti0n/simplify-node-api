@@ -4,7 +4,9 @@ const  mongodb=require('mongodb');
 const MongoClient = mongodb.MongoClient;
 const ObjectID = mongodb.ObjectID;
 const assert = require('assert');
-const MongoUrl='mongodb://localhost:27017/angular2';
+const MongoUrl=process.env.ONGODB_URI;
+
+
 
 module.exports.onConnect = (callback) => {
 
