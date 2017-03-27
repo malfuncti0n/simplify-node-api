@@ -121,7 +121,10 @@ class Helper{
 				},
 				{
 					$set : {
-						name:data.name,
+						email:data.email,
+                        username:data.username,
+                        firstname:data.firstname,
+                        lastname:data.lastname,
 						gender:data.gender,
 						country:data.country
 					}
