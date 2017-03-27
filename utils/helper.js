@@ -125,6 +125,7 @@ class Helper{
                         username:data.username,
                         firstname:data.firstname,
                         lastname:data.lastname,
+                        password:data.password,
 						gender:data.gender,
 						country:data.country
 					}
