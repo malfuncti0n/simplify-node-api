@@ -46,7 +46,7 @@ class Helper{
 
 					}else{
                         //user found
-                        console.log(response);
+                        console.log(result);
                         callback(result);
 
 
