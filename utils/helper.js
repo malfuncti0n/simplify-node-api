@@ -21,37 +21,37 @@ class Helper{
 		});
 	}
 
-//    getUser(data,callback){
-//
-//		db.collection('users').findOne(data,function(err, result){
-//
-//				if(err){
-//
-//					response.error = true;
-//					response.isUserExists = false;
-//					response.message = `Something went Wrong,try after sometime.`;
-//					callback(response);
-//
-//				}else{
-//
-//					if(result == null ){
-//
-//						response.error = true;
-//						response.isUserExists = false;
-//						response.message = `User not found.`;
-//
-//						callback(response);
-//
-//					}else{
-//                        //user found
-//                        callback(result);
-//
-//
-//					}
-//				}
-//			});
-//	}
-//
+    getUser(data,callback){
+
+		db.collection('users').findOne(data,function(err, result){
+
+				if(err){
+
+					response.error = true;
+					response.isUserExists = false;
+					response.message = `Something went Wrong,try after sometime.`;
+					callback(response);
+
+				}else{
+
+					if(result == null ){
+
+						response.error = true;
+						response.isUserExists = false;
+						response.message = `User not found.`;
+
+						callback(response);
+
+					}else{
+                        //user found
+                        callback(result);
+
+
+					}
+				}
+			});
+	}
+
 
 
 	addUser(data,callback){
