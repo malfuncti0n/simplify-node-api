@@ -162,8 +162,7 @@ class Routes {
 
         /* Route to authenticate user*/
         this.app.post('/api/authenticate', (request, response) => {
-
-
+            console.log(request.body);
             helper.getUser(request.body, (result) => {
 
                 if (result) {

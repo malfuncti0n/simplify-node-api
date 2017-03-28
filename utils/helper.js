@@ -31,6 +31,7 @@ class Helper{
 					response.error = true;
 					response.isUserExists = false;
 					response.message = `Something went Wrong,try after sometime.`;
+                    console.log(response);
 					callback(response);
 
 				}else{
@@ -40,11 +41,12 @@ class Helper{
 						response.error = true;
 						response.isUserExists = false;
 						response.message = `User not found.`;
-
+                        console.log(response);
 						callback(response);
 
 					}else{
                         //user found
+                        console.log(response);
                         callback(result);
 
 
@@ -76,6 +78,7 @@ class Helper{
 					response.error = true;
 					response.isUserExists = false;
 					response.message = `Something went Wrong,try after sometime.`;
+                    console.log(response);
 					callback(response);
 
 				}else{
@@ -85,7 +88,7 @@ class Helper{
 						response.error = true;
 						response.isUserExists = true;
 						response.message = `User already exists.`;
-
+                        console.log(response);
 						callback(response);
 
 					}else{
@@ -105,7 +108,7 @@ class Helper{
 								response.id=result.ops[0]._id;
 								response.message = `User added.`;
 							}
-
+                            console.log(response);
 							callback(response);
 						});
 
