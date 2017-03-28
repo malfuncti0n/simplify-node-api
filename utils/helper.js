@@ -22,6 +22,7 @@ class Helper{
 	}
 
     getUser(data,callback){
+        this.Mongodb.onConnect( (db,ObjectID) => {
 
 		db.collection('users').findOne(data,function(err, result){
 
@@ -50,7 +51,9 @@ class Helper{
 					}
 				}
 			});
-	}
+	});
+}
+
 
 
 
