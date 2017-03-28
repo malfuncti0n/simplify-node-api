@@ -45,7 +45,7 @@ class Routes {
         this.app.post('/api/users/', (request, response) => {
 
 
-            helper.addUser(request.body, (result) => {
+            helper.addUser(request.body,response (result) => {
 
                 if (result.error) {
 
